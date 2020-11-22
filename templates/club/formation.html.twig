@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<style>
+    .example-wrapper { font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .title {text-align: center;}
+    img {display: block;
+        margin-left: auto;
+        margin-right: auto;}
+</style>
+<h1> Les formations disponibles : </h1>
+<p>total_participants : {{ total_participant }} </p>
+{% for formation in formations %}
+    <div>
+        <p>Ref: {{ formation.ref|e }}</p>
+        <p>Titre: {{ formation.Titre|e }}</p>
+        <p>Description: {{ formation.Description|e }}</p>
+        <p>date_debut: {{ formation.date_debut|e }}</p>
+        <p>date_fin: {{ formation.date_fin|e }}</p>
+        <p>Nombre_Participant: {{ formation.nb_participants|e }}</p>
+    </div>
+{% endfor %}
+<div>
+    <p> Nombre de formation : {{ formations|length }}</p>
+</div>
+</body>
+</html>

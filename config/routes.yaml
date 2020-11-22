@@ -1,0 +1,12 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+EspritClub:
+  path: /club
+  controller: App\Controller\ClubController::index
+GetName:
+    path: /club/{name}
+    controller: App\Controller\ClubController::getName
+Formations:
+  path: /formations
+  controller: App\Controller\ClubController::list
